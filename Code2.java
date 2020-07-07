@@ -1,5 +1,8 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class Code2 {
@@ -11,18 +14,21 @@ public class Code2 {
     public static void main(String[] args) {
         try {
             Scanner kb = new Scanner(new File("D:\\java remind\\code16\\javaProblem\\index.txt"));
-            //기능의 분할
-            String test = kb.nextLine();
-            System.out.println(test);    
-            String test2 = kb.nextLine();
-            System.out.println(test2);
-            String test3 = kb.nextLine();
-            System.out.println(test3);
+            // 기능의 분할
+            try {
+                PrintWriter prw = new PrintWriter(new FileWriter("D:\\java remind\\code16\\javaProblem\\index2.txt"));
+                
+                while(kb.hasNextLine()){
+                    String str = change(kb.nextLine());
+                    System.out.println(str);
+                    prw.println(str);
+                }
+                prw.close();
+            } catch (IOException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
 
-
-            System.out.println(change(test));
-            System.out.println(change(test2));
-            System.out.println(change(test3));
 
             
 
