@@ -16,8 +16,15 @@ public class Code2 {
             System.out.println(test);    
             String test2 = kb.nextLine();
             System.out.println(test2);
+            String test3 = kb.nextLine();
+            System.out.println(test3);
+
 
             System.out.println(change(test));
+            System.out.println(change(test2));
+            System.out.println(change(test3));
+
+            
 
             kb.close();
         } catch (FileNotFoundException e) {
