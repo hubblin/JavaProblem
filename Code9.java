@@ -1,4 +1,10 @@
 public class Code9 {
+    /*
+    문제9 
+    level2
+    카카오 인턴쉽 2번 문제
+    수식이 적힌 문자열을 연산의 우선순위를 다르게 해서 절댓값이 가장 큰 수를 출력하라
+     */
     public static void main(String[] args){
         int[] arr = {1,2,3};
         perm(arr, 0, 3,3);
