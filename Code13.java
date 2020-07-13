@@ -23,5 +23,6 @@ public class Code13 {
             i++;
         }
         System.out.println(pbh);
+        sc.close();
     }
 }
