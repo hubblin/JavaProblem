@@ -12,21 +12,19 @@ public class Code16 {
         Scanner sc = new Scanner(System.in);
         int number = sc.nextInt();
 
-        Name(number, 1);
+        Name(number);
         Rname(number);
         sc.close();
     }
 
-    public static void Name(int number, int i){
-        
-        if(i == number){
-            System.out.println(i);
+    public static void Name(int number){
+        if(number == 0){
             return;
         }else{
-            System.out.println(i);
-            i++;
-            Name(number, i);
+            Name(number-1);
+            System.out.println(number);
         }
+        
     }
 
     public static void Rname(int number){
