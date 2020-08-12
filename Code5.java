@@ -6,10 +6,11 @@ public class Code5 {
 
     정렬이 되고 나 후, 음의 정수는 앞쪽에 양의정수는 뒷쪽에 있어야 한다. 또한 양의정수와 음의정수의 순서에는 병함이 
     없어야 한다.
+    Ex)-1,1,3,-2,2 --> -1,-2,1,3,2
      */
 
     public static void main(final String[] args){
-        int[] number = {-1,1,3,-2,2};
+        int[] number = {-1,1,3,-3,-2};
         int count =0;
         for(int i =0; i < number.length; i++){
             if(number[i] < 0){
