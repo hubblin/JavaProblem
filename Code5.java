@@ -9,19 +9,20 @@ public class Code5 {
     Ex)-1,1,3,-2,2 --> -1,-2,1,3,2
      */
 
-    public static void main(final String[] args){
-        int[] number = {-1,1,3,-3,-2};
-        int count =0;
-        for(int i =0; i < number.length; i++){
-            if(number[i] < 0){
-                int temp = number[count];
-                number[count] = number[i];
-                number[i] = temp;
-                count++;
+    public static void main(String[] args){
+        int[] list = {-1,1,-3,3,-2,2,4};
+        int length = list.length-1;
+        for(int i=0; i<length; i++){
+            for(int j=0; j<(length-i); j++){
+                if(list[j] > 0 && list[j+1] < 0){
+                    int k = list[j];
+                    list[j] = list[j+1];
+                    list[j+1] = k;
+                }
             }
         }
-        for(int i =0; i < number.length; i++){
-            System.out.print(number[i] + ",");
+        for(int k : list) {
+            System.out.print(k+",");
         }
 
     }
